@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --color-cyan: #5DB6AE;
+  --color-dark-purple: #2B2031;
+  --color-purple: #423D65;
+  --color-yellow: #DBF38B;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+body,html{
+  background-color: var(--color-dark-purple);
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+}
