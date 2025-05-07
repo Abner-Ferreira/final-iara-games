@@ -21,9 +21,9 @@ const Sidebar = () => {
           {isExpanded && <span className={styles.label}>Jogos</span>}
         </NavLink>
 
-        <NavLink to="/historico" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
+        <NavLink to="/carrinho" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
           <FaShoppingCart />
-          {isExpanded && <span className={styles.label}>Histórico</span>}
+          {isExpanded && <span className={styles.label}>Carrinho</span>}
         </NavLink>
 
       </nav>

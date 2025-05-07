@@ -29,8 +29,24 @@ export default function JogosProvider({ children }) {
       .catch((err) => console.error(err))
   }
 
+  const [gameFiltered, setGameFiltered] = useState([])
+
+  function filtrarPorJogo(termo) {
+    if (!termo) {
+      setGameFiltered([])
+      return
+    }
+  
+    const resultado = jogos?.filter(jogo =>
+      jogo.title.toLowerCase().includes(termo.toLowerCase())
+    )
+  
+    setGameFiltered(resultado)
+  }
+
+
   return (
-    <JogosContext.Provider value={{ jogos, getJogos }}>
+    <JogosContext.Provider value={{ jogos, getJogos, filtrarPorJogo, gameFiltered }}>
       {children}
     </JogosContext.Provider>
   )
