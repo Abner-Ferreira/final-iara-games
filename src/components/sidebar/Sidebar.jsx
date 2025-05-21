@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { FaHome, FaThLarge } from 'react-icons/fa';
+import { MdRedeem } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
-import { FaThLarge, FaShoppingCart, FaHome } from 'react-icons/fa';
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {
@@ -21,9 +22,9 @@ const Sidebar = () => {
           {isExpanded && <span className={styles.label}>Jogos</span>}
         </NavLink>
 
-        <NavLink to="/carrinho" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
-          <FaShoppingCart />
-          {isExpanded && <span className={styles.label}>Carrinho</span>}
+        <NavLink to="/jogos-resgatados" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
+          <MdRedeem />
+          {isExpanded && <span className={styles.label}>Jogos resgatados</span>}
         </NavLink>
 
       </nav>

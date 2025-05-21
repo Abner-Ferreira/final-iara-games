@@ -85,6 +85,7 @@ export default function Home() {
             title={jogo.title}
             description={jogo.short_description}
             realiseDate={jogo.release_date}
+            gameUrl={jogo.game_url}
           />
         ))}
       </main>

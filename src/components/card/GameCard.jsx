@@ -4,8 +4,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useContext } from 'react';
+import { JogosContext } from '../../context/Jogos';
 
-export default function GameCard({thumbnail, genre, id, title, description, realiseDate}) {
+export default function GameCard({thumbnail, genre, id, title, description, realiseDate, gameUrl}) {
+
+  const { resgatarJogo } = useContext(JogosContext)
+
+  const game = {thumbnail, genre, id, title, description, realiseDate, gameUrl}
+  
   return (
     <Card sx={{ maxWidth: 345 }} id={id}>
       <CardMedia
@@ -22,8 +29,8 @@ export default function GameCard({thumbnail, genre, id, title, description, real
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small" variant="contained" onClick={() => resgatarJogo(game)}>Resgatar</Button>
+        <Button size="small" variant="text">Saiba mais</Button>
       </CardActions>
     </Card>
   );
