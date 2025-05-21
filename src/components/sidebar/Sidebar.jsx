@@ -17,7 +17,7 @@ const Sidebar = () => {
           {isExpanded && <span className={styles.label}>Menu</span>}
         </button>
 
-        <NavLink to="/jogos" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
+        <NavLink to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
           <FaHome />
           {isExpanded && <span className={styles.label}>Jogos</span>}
         </NavLink>

@@ -6,7 +6,7 @@ import JogosResgatados from '../pages/jogos-resgatados/JogosResgatados';
 const Rotas = () => {
   return (
     <Routes>
-      <Route path="/jogos" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/jogos-resgatados" element={<JogosResgatados />} />
     </Routes>
   );
